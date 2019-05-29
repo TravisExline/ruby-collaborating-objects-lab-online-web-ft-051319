@@ -1,5 +1,5 @@
 class Artist
-  attr_reader :name, :songs
+  attr_accessor :name, :songs
   @@all = []
 
   def initialize(name)
