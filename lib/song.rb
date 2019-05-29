@@ -13,6 +13,5 @@ class Song
 
     new_song.artist = artist
     artist.add_song(new_song)
-    new_song
   end
 end
