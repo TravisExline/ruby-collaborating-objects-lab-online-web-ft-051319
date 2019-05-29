@@ -20,7 +20,12 @@ class Artist
   end
 
   def self.find_or_create_by_name(name)
-    self.all.detect {|artist| artist.name == name || self.new(name).save}
+    found_arist = @@all.find{ |artist| artist.name == name}
+    if found_arist == nil
+      self.new(name)
+    else
+      found_arist
+    end
   end
 
   def print_songs
